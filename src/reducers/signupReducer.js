@@ -4,8 +4,6 @@ const signUpChecker = (state, action) => {
     switch (action.type) {
     case "SIGNUP":{
       if (action.payload) {
-          console.log("signup payload>>", action.payload);
-          
         alert("success",action.payload.success,null, null, null);
         return {
           ...state,
@@ -15,7 +13,6 @@ const signUpChecker = (state, action) => {
   
     case "SIGNUP_ERROR":{
       if (action.payload) {
-        console.log("signup error payload>>", action.payload, typeof action.payload);
         errorAlert("error", action.payload);
         return {
           ...state,
