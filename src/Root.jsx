@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 
 const Root = (props) =>{
   const {children} = props;
+
   return (
     <div>
       <Header />

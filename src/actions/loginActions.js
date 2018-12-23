@@ -9,14 +9,12 @@ export const runFetch =(dispatch, fetchObject)=> fetch(
       res.json().then(data => ((res.ok && Promise.resolve(data)) || (!res.ok && Promise.reject(data))))
     ))
     .then(data=> {
-        console.log("login data>>>", data);
       if ("access_token" in data) {
         dispatch({
           type:"LOGIN",
           payload: data});
       }})
     .catch( error => {
-        console.log("login error>>>", error);
       dispatch({
         type:"LOGIN_ERROR",
         payload: typeof error === "string" ? error : error.message });
