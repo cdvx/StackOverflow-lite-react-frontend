@@ -5,6 +5,7 @@ import Root from "./Root";
 import Home from "./components/Home";
 import signUp from "./components/SignUp";
 import Login from "./components/Login";
+import PostQuestion from "./components/PostQuestion";
 import store from "./store";
 
 const AppRouter = () => (
@@ -17,6 +18,7 @@ const AppRouter = () => (
               {/* <Route path="/login" component={Login} /> */}
               <Route exact path="/signup" component={signUp} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/postquestion" component={PostQuestion} />
               <Route path="/home" component={Home} />
             </div>
           </Root>

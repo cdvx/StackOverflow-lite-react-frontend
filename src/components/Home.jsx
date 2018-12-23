@@ -1,7 +1,5 @@
 import React from 'react';
-import Header from "./Header";
-import Footer from "./Footer";
-import SignUp from "./SignUp";
+import Questions from "./Questions";
 import "../assets/styles.css";
 
 class Home extends React.Component {
@@ -11,7 +9,7 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <div className="jumbotron2">
-          
+          <Questions />
         </div>
       </React.Fragment>
     );

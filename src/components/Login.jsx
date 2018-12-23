@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
 import login from "../actions/loginActions";
-import {errorAlert} from "../actions/signUpActions";
 
 class Login extends Component {
     state = {  
@@ -38,7 +37,7 @@ class Login extends Component {
                 <div id="signup" className="container">
                 <form className="form-horizontal" >
                     <fieldset>
-                        <legend>SIgn Up</legend>
+                        <legend>Sign In</legend>
                         <div className="form-group">
                             <label htmlFor="inputUsername" className="col-lg-2 control-label">Username</label>
                             <div className="col-lg-10">
