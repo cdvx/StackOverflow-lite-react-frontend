@@ -5,6 +5,7 @@ const signUpChecker = (state, action) => {
     case "SIGNUP":{
       if (action.payload) {
           console.log("signup payload>>", action.payload);
+          
         alert("success",action.payload.success,null, null, null);
         return {
           ...state,
