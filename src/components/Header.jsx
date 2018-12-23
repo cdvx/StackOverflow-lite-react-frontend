@@ -32,13 +32,8 @@ const Header = () => {
                         </ul>
                         </li>
                     </ul>
-                    {/* <form id="search" className="navbar-form navbar-left mr-auto" role="search">
-                        <div className="form-group">
-                        <input type="text" className="form-control" placeholder="Search" />
-                        </div>
-                        <button type="submit" className="btn btn-default">Submit</button>
-                    </form> */}
                     <ul className="nav navbar-nav navbar-right">
+                        <li><a href="/login">Login</a></li>
                         <li><a href="/signup">SignUp</a></li>
                     </ul>
                     </div>

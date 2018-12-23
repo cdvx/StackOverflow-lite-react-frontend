@@ -88,11 +88,6 @@ class SignUp extends Component {
                                 <input type="password" 
                                     onChange={()=>(this.onChangeField(event, "repeatPassword"))}
                                     className="form-control" id="inputRepeatPassword" placeholder="Repeat Password" required/>
-                            <div className="checkbox">
-                            <label>
-                                <input type="checkbox" /> Remember me
-                            </label>
-                            </div>
                         </div>
                         </div>
                         <div className="form-group">
