@@ -1,17 +1,29 @@
-import React from 'react';
+// import React from 'react';
+// import Header from "./components/Header";
+// import Footer from "./components/Footer";
+// import SignUp from "./components/SignUp";
+// import "./assets/styles.css";
 
-class App extends React.Component {
-  state = {
-    name: 'john',
-  };
+// class App extends React.Component {
+//   state = {
+//     name: 'Cedric',
+//   };
 
-  renderGreeting = () => (
-    <h1>Welcome!!! {this.state.name}!</h1>
-  );
+ 
 
-  render() {
-    return this.renderGreeting();
-  }
-}
+//   render() {
+//     return (
+//       <React.Fragment>
+//         <Header />
+//         <div className="jumbotron2">
+//           <div id="signup" className="container">
+//             <SignUp />
+//           </div>
+//         </div>
+//         <Footer />
+//       </React.Fragment>
+//     );
+//   }
+// }
 
-export default App;
+// export default App;
