@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import questions from "../actions/questionsAction"
-
-const Question = ({question}) => {
+import questions from "../actions/questionsAction";
+import question from "../actions/questionAction";
+export const Question = ({question}) => {
     return (  
         <React.Fragment >
             <blockquote>
@@ -13,6 +13,7 @@ const Question = ({question}) => {
         </React.Fragment>
     );
 }
+
 
 const Info = ({messages}) => {
     return (  
@@ -32,22 +33,23 @@ class Questions extends Component {
     };
 
     componentWillMount(){
-        const {getQuestions, results, messages} = this.props;
-        getQuestions()
-        console.log("questioms here>.>", results, messages)
-        this.setState({
-            questions: results,
-            messages
-        })
+        const {getQuestions} = this.props;
+        getQuestions();
+    }
 
+    handleQuestionClick =  questionId => {
+        const {getQuestion} = this.props;
+        getQuestion(questionId);
+        console.log("id set", questionId);
+        localStorage.setItem("questionId", questionId);
+        console.log("id get 1", localStorage.getItem("questionId", questionId));
     }
 
     renderQuestions = questions => (questions.map(question=>{
-        
         return (
         <React.Fragment>
             <tr >
-            <td ><Question question={question} /></td>
+            <td ><a id="select-question" href="/question" onClick={()=>(this.handleQuestionClick(question.questionId))}><Question question={question} /></a></td>
             </tr>
         </React.Fragment>
         )
@@ -81,7 +83,8 @@ export const mapStateToProps = ({questions}) => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-    getQuestions: () => dispatch(questions())
+    getQuestions: () => dispatch(questions()),
+    getQuestion: questionId => dispatch(question(questionId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Questions);

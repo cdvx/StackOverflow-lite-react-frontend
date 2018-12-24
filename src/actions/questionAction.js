@@ -1,26 +1,26 @@
 
-const questionsUrl = "https://stackoverflow-lite-cdvx2.herokuapp.com/api/v1/questions";
+const questionUrl = questionId => (`https://stackoverflow-lite-cdvx2.herokuapp.com/api/v1/questions/${questionId}`);
 
-export const runFetch =(dispatch, fetchObject)=> fetch(
-    questionsUrl,
+export const runFetch =(dispatch, questionId, fetchObject)=> fetch(
+    questionUrl(questionId),
     fetchObject
   )
     .then(res => (
       res.json().then(data => ((res.ok && Promise.resolve(data)) || (!res.ok && Promise.reject(data))))
     ))
     .then(data=> {
-      if ("questions" in data) {
+      if ("questionId" in data) {
         dispatch({
-          type:"QUESTIONS",
+          type:"QUESTION",
           payload: data});
       }})
     .catch( error => {
       dispatch({
-        type:"QUESTIONS_ERROR",
+        type:"QUESTION_ERROR",
         payload: typeof error === "string" ? error : error.message });
     });
   
-  const questions = () => {
+  const question = (questionId) => {
   
     const fetchObject = {
       method: "GET",
@@ -28,11 +28,9 @@ export const runFetch =(dispatch, fetchObject)=> fetch(
       headers: { "content-type": "application/json"}
     };
     return (dispatch)=>{
-      runFetch(dispatch, fetchObject);
+      runFetch(dispatch, questionId, fetchObject);
   
     };
   };
   
-  export default questions;
-  
-  
+  export default question;

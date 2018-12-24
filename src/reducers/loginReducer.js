@@ -4,8 +4,6 @@ const loginChecker = (state, action) => {
     switch (action.type) {
     case "LOGIN":{
       if (action.payload) {
-          console.log("login payload>>", action.payload);
-          
         alert("success",null,action.payload.username, action.payload.access_token, "/");
         return {
           ...state,
@@ -15,7 +13,6 @@ const loginChecker = (state, action) => {
   
     case "LOGIN_ERROR":{
       if (action.payload) {
-        console.log("login error payload>>", action.payload, typeof action.payload);
         errorAlert("error", action.payload);
         return {
           ...state,

@@ -4,8 +4,6 @@ const questionChecker = (state, action) => {
     switch (action.type) {
     case "POST_QUESTION":{
       if (action.payload) {
-          console.log("postquestion payload>>", action.payload);
-          
         alert("success",action.payload.success,null, null, "/");
         return {
           ...state,
@@ -15,7 +13,6 @@ const questionChecker = (state, action) => {
 
     case "POST_MESSAGE":{
         if (action.payload) {
-            console.log("postquestion message payload>>", action.payload, typeof action.payload);
             errorAlert("error", action.payload.message);
         alert("error",action.payload,null, null, null)
         return {
@@ -26,7 +23,6 @@ const questionChecker = (state, action) => {
   
     case "POST_QUESTION_ERROR":{
       if (action.payload) {
-        console.log("postquestion error payload>>", action.payload, typeof action.payload);
         errorAlert("error", action.payload);
         return {
           ...state,
