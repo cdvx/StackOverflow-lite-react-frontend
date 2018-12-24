@@ -1,5 +1,5 @@
 
-const postQuestionUrl = "http://127.0.0.1:5000/api/v1/questions";
+const postQuestionUrl = "https://stackoverflow-lite-cdvx2.herokuapp.com/api/v1/questions";
 
 export const runFetch =(dispatch, fetchObject)=> fetch(
     postQuestionUrl,
@@ -9,21 +9,18 @@ export const runFetch =(dispatch, fetchObject)=> fetch(
       res.json().then(data => ((res.ok && Promise.resolve(data)) || (!res.ok && Promise.reject(data))))
     ))
     .then(data=> {
-        console.log("post questions data>>>", data);
       if ("success" in data) {
         dispatch({
           type:"POST_QUESTION",
           payload: data});
       }
       else if ("message" in data){
-        console.log("post questions message>>>", data);
         dispatch({
           type:"POST_MESSAGE",
           payload: data.message});
       }
     })
     .catch( error => {
-        console.log("post questions error>>>", error);
       dispatch({
         type:"POST_QUESTION_ERROR",
         payload: typeof error === "string" ? error : error.msg || error.message});

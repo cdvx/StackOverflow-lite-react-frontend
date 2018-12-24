@@ -92,7 +92,6 @@ class SignUp extends Component {
                         </div>
                         <div className="form-group">
                             <div className="col-lg-10 col-lg-offset-2">
-                                <button type="reset" className="btn btn-default">Cancel</button>
                                 <button 
                                     onClick={this.signupUser}
                                     type="submit" className="btn btn-primary">Submit</button>
