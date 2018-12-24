@@ -3,7 +3,7 @@ import React from 'react';
 export default () => (
   <div>
     {/* <!-- Footer --> */}
-    <footer className="page-footer relative-bottom font-small unique-color-dark">
+    <footer id="head-footer" className="page-footer relative-bottom font-small unique-color-dark">
       {/* <!-- Footer Elements --> */}
       <hr id="thisLine"/>
       <div className="container">

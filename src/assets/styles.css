@@ -7,6 +7,7 @@ html {
 }
 body {
   margin: 0;
+  background-color: #f3f5f7 !important;
 }
 article,
 aside,
@@ -205,7 +206,7 @@ th {
   }
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid /*#999*/ #d8e8f0;
     page-break-inside: avoid;
   }
   thead {
@@ -2235,7 +2236,7 @@ pre code {
   }
 }
 table {
-  background-color: #181818;
+  background-color: /*#181818*/ rgb(20, 10, 109) /*#2e434d*/;
 }
 table col[class*="col-"] {
   position: static;
@@ -2264,13 +2265,51 @@ th {
 #signup {
   width: 50% !important;
 }
- 
+
+#select-question:hover {
+  color: #fdea96 !important;
+}
+
+#select-question {
+  text-decoration: none;
+}
+#head-footer{
+  background: /*#2e434d*/ rgb(20, 10, 109) !important;
+}
+#quest {
+  background: #dceaf0 !important;
+  border-top: none !important;
+  border-bottom: 0.5px solid rgb(20, 10, 109) !important;
+  /* margin-bottom: 20px !important; */
+}
+
+#space-this {
+  height: 5px;
+  background-color: #f3f5f7;
+}
+
+#quest #text-body1 {
+  color: rgb(20, 10, 109);
+}
+#quest #text-body1:hover {
+  color: #aa7c17 !important;
+}
+
+
 #thisLine {
   size: 2px;
   background: #15506c !important;
 }
 .jumbotron2 {
   min-height: 60rem !important;
+
+}
+#button-dark-blue {
+  background-color: rgb(20, 10, 109) !important;
+}
+
+.text-black{
+  color: rgb(20, 10, 109) !important;
 }
 .table {
   width: 100%;
@@ -5744,7 +5783,7 @@ button.list-group-item-danger.active:focus {
 }
 .well blockquote {
   border-color: #ddd;
-  border-color: rgba(0, 0, 0, 0.15);
+  border-color: /*rgba(0, 0, 0, 0.15)*/ #d8e8f0;
 }
 .well-lg {
   padding: 24px;

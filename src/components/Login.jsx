@@ -37,7 +37,7 @@ class Login extends Component {
                 <div id="signup" className="container">
                 <form className="form-horizontal" >
                     <fieldset>
-                        <legend>Sign In</legend>
+                        <legend className="text-black" >Sign In</legend>
                         <div className="form-group">
                             <label htmlFor="inputUsername" className="col-lg-2 control-label">Username</label>
                             <div className="col-lg-10">
@@ -64,8 +64,8 @@ class Login extends Component {
                         </div>
                         <div className="form-group">
                             <div className="col-lg-10 col-lg-offset-2">
-                                <button type="reset" className="btn btn-default">Cancel</button>
                                 <button 
+                                    id="button-dark-blue" 
                                     onClick={this.loginUser}
                                     type="submit" className="btn btn-primary">Submit</button>
                             </div>

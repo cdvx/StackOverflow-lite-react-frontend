@@ -1,16 +1,15 @@
 
-import {alert, errorAlert} from "../actions/signUpActions";
-const questionsChecker = (state, action) => {
+const questionChecker = (state, action) => {
     switch (action.type) {
-    case "QUESTIONS":{
+    case "QUESTION":{
       if (action.payload) {
         return {
           ...state,
-          questions: action.payload.questions
+          question: action.payload
         };
       }};
   
-    case "QUESTIONS_ERROR":{
+    case "QUESTION_ERROR":{
       if (action.payload) {
         return {
           ...state,
@@ -24,9 +23,9 @@ const questionsChecker = (state, action) => {
   };
   
 const initialState = {
-    questions: []
+    question: {}
 
 };
   
-export default (state = initialState, action) => (questionsChecker(state, action));
+export default (state = initialState, action) => (questionChecker(state, action));
   

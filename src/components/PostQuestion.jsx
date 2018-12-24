@@ -63,7 +63,7 @@ class PostQuestion extends Component {
                     <fieldset>
 
 
-                        <legend>Post Question</legend>
+                        <legend className="text-black">Post Question</legend>
                         <div className="form-group">
                             <label htmlFor="inputTopic" className="col-lg-2 control-label">Topic</label>
                             <div className="col-lg-10">
@@ -72,20 +72,6 @@ class PostQuestion extends Component {
                             </div>
                         </div>
 
-                        {/* <div className="form-group">
-                            <label htmlFor="inputPassword" className="col-lg-2 control-label">Password</label>
-                            <div className="col-lg-10">
-                                <input type="password" 
-                                    required={true}
-                                    onChange={()=>(this.onChangeField(event, "password"))}
-                                    className="form-control" id="inputRepeatPassword" placeholder="Password" />
-                            <div className="checkbox">
-                            <label>
-                                <input type="checkbox" /> Remember me
-                            </label>
-                            </div>
-                        </div>*/}
-                        {/* </div>  */}
                         <div className="form-group">
                         <label htmlFor="textArea" class="col-lg-2 control-label">Body</label>
                         <div className="col-lg-10">
@@ -98,6 +84,7 @@ class PostQuestion extends Component {
                             <div className="col-lg-10 col-lg-offset-2">
                                 {/* <button type="reset" className="btn btn-default">Cancel</button> */}
                                 <button 
+                                    id="button-dark-blue"
                                     onClick={this.postQuestion}
                                     type="submit" className="btn btn-primary mt-4">Post Question</button>
                             </div>
