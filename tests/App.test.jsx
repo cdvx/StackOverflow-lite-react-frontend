@@ -1,9 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import App from '../src/App';
+import AppRouter from '../src/AppRouter';
 
-describe('<App />', () => {
+describe('<AppRouter />', () => {
   it('should render without crashing', () => {
-    expect(mount.bind(null, <App />)).not.toThrow();
+    expect(mount.bind(null, <AppRouter />)).toMatchSnapshot();
   });
 });
