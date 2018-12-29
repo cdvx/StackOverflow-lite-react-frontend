@@ -8,3 +8,6 @@ install:
 scripts:
   - yarn test -u --coverage
   - bundle exec rspec
+
+after_success:
+    - coveralls
