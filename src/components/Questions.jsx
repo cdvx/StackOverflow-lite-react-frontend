@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import questions from "../actions/questionsAction";
-// import question from "../actions/questionAction";
+
 export const Question = ({question}) => {
     return (  
         <React.Fragment >
@@ -48,6 +48,7 @@ class Questions extends Component {
                 <td id="quest"><a id="select-question" href="/question" onClick={()=>(this.handleQuestionClick(question.questionId))}><Question question={question} /></a></td>
                 </tr>
                 <div id="space-this"></div>
+
         </React.Fragment>
         )
     }));
@@ -80,7 +81,8 @@ export const mapStateToProps = ({questions}) => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-    getQuestions: () => dispatch(questions())
+    getQuestions: () => dispatch(questions()),
+    getQuestion: questionId => dispatch(question(questionId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Questions);

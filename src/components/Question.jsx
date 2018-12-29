@@ -17,17 +17,21 @@ class ShowQuestion extends Component{
     render(){
         
         const {question} = this.props;
+
         return (
             <React.Fragment>
                 <table className="table table-striped table-hover ">
                     <thead>
                         <tr>
-                        <div className="container"><th><big >Question</big></th></div>
+
+                        <div className="container"><th><big className="text-primary">Question</big></th></div>
+
                         </tr>
                     </thead>
                     <tbody>
                         <tr >
                         <td id="quest"><Question question={question.question} /></td>
+
                         </tr>
                     </tbody>
                 </table>
