@@ -11,7 +11,6 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <div className="jumbotron2">
-          
         </div>
       </React.Fragment>
     );
