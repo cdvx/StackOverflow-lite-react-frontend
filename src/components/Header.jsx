@@ -30,7 +30,7 @@ class Header extends Component {
                         <ul className="nav navbar-nav navbar-right">
                             {!localStorage.getItem("token") && <li><a id="select-question" href="/login">Login</a></li>}
                             {!localStorage.getItem("token") && <li><a id="select-question" href="/signup">SignUp</a></li>}
-                            {localStorage.getItem("token") && <li><a id="select-question" href="/" onClick={this.logOut}>Sign out</a></li>}
+                            {localStorage.getItem("token") && <li><a id="select-question" href="/" onClick={this.logOut} >Sign out</a></li>}
                         </ul>
                         </div>
                     </div>
