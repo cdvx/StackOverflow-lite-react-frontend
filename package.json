@@ -10,8 +10,8 @@
     "test:dev": "yarn test --watch",
     "coverage": "yarn test --coverage",
     "start": "NODE_ENV=production webpack",
-    "heroku-prebuild": "yarn install --production=false",
-    "heroku-postbuild": "webpack -p"
+    "heroku-prebuild": "yarn install",
+    "heroku-postbuild": "yarn build"
   },
   "dependencies": {
     "@babel/core": "^7.1.6",

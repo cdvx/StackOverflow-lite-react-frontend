@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "lts/*"
+
+install:
+  - yarn
+
+scripts:
+  - yarn test -u --coverage
+  - bundle exec rspec
