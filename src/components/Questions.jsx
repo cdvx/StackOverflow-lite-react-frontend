@@ -37,9 +37,7 @@ class Questions extends Component {
         getQuestions();
     }
 
-    handleQuestionClick =  questionId => {
-        const {getQuestion} = this.props;
-        // getQuestion(questionId);                             
+    handleQuestionClick =  questionId => {               
         localStorage.setItem("questionId", questionId);
     }
 
@@ -82,8 +80,7 @@ export const mapStateToProps = ({questions}) => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-    getQuestions: () => dispatch(questions()),
-    // getQuestion: questionId => dispatch(question(questionId))
+    getQuestions: () => dispatch(questions())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Questions);
