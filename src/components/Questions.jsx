@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import questions from "../actions/questionsAction";
-import question from "../actions/questionAction";
+
 export const Question = ({question}) => {
     return (  
         <React.Fragment >
-            <blockquote>
-                <p className="text-primary" ><strong>Topic: </strong>{question.topic}</p>
-                <p >{question.body}</p>
-                <small  className="text-success"><strong>Author: </strong>{question.author}</small>
+            <blockquote id="blockQ">
+                <p className="text-black" ><strong>Topic: </strong>{question.topic}</p>
+                <p id="text-body1">{question.body}</p>
+                <small  className="text-black"><strong>Author: </strong>{question.author}</small>
             </blockquote>
         </React.Fragment>
     );
@@ -37,20 +37,18 @@ class Questions extends Component {
         getQuestions();
     }
 
-    handleQuestionClick =  questionId => {
-        const {getQuestion} = this.props;
-        getQuestion(questionId);
-        console.log("id set", questionId);
+    handleQuestionClick =  questionId => {               
         localStorage.setItem("questionId", questionId);
-        console.log("id get 1", localStorage.getItem("questionId", questionId));
     }
 
     renderQuestions = questions => (questions.map(question=>{
         return (
         <React.Fragment>
-            <tr >
-            <td ><a id="select-question" href="/question" onClick={()=>(this.handleQuestionClick(question.questionId))}><Question question={question} /></a></td>
-            </tr>
+                <tr >
+                <td id="quest"><a id="select-question" href="/question" onClick={()=>(this.handleQuestionClick(question.questionId))}><Question question={question} /></a></td>
+                </tr>
+                <div id="space-this"></div>
+
         </React.Fragment>
         )
     }));
@@ -62,7 +60,7 @@ class Questions extends Component {
                 <table className="table table-striped table-hover ">
                     <thead>
                         <tr>
-                        <div className="container"><th><big className="text-primary">Questions</big></th></div>
+                        <div className="container"><th><big >Questions</big></th></div>
                         </tr>
                     </thead>
                     <tbody>

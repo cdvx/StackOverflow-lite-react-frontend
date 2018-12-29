@@ -4,7 +4,7 @@ const signUpChecker = (state, action) => {
     switch (action.type) {
     case "SIGNUP":{
       if (action.payload) {
-        alert("success",action.payload.success,null, null, "/signin");
+        alert("success",action.payload.success,null, null, "/login");
         return {
           ...state,
           message: action.payload.success

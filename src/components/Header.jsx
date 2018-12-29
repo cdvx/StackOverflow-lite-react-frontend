@@ -10,7 +10,7 @@ class Header extends Component {
     render() {
         return (  
             <header>
-                <nav className="navbar navbar-default">
+                <nav  id="head-footer" className="navbar navbar-default">
                     <div className="container-fluid">
                         <div className="navbar-header">
                         <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">

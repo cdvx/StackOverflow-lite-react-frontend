@@ -23,12 +23,15 @@ class ShowQuestion extends Component{
                 <table className="table table-striped table-hover ">
                     <thead>
                         <tr>
+
                         <div className="container"><th><big className="text-primary">Question</big></th></div>
+
                         </tr>
                     </thead>
                     <tbody>
                         <tr >
-                        <td ><Question question={question.question} /></td>
+                        <td id="quest"><Question question={question.question} /></td>
+
                         </tr>
                     </tbody>
                 </table>
