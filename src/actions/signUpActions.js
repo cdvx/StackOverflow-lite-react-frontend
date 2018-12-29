@@ -1,6 +1,6 @@
 import toastr from "toastr";
 
-const signUpUrl = "http://127.0.0.1:5000/api/v1/auth/signup";
+const signUpUrl = "https://stackoverflow-lite-cdvx2.herokuapp.com/api/v1/auth/signup";
 
 function storeDataToast(username, token, url){
     toastr.success(`Logging in as ${username}!`);
@@ -17,7 +17,7 @@ function toastError(type, errorMsg){
     type === "error" && errorMsg ? toastr.error(errorMsg): null;
 };
 function toastSuccess(type, errorMsg, url){
-    type === "success" ? toastr.success(errorMsg) && url && setTimeout(() => window.location.replace(url), 3000): toastError(type, errorMsg);
+    type === "success" ? toastr.success(errorMsg) && url && setTimeout(() => window.location.replace(url), 2000): toastError(type, errorMsg);
 };
 export const alert=(type,errorMsg,username, token, url)=>(
     type === "error" || "success"  && !username && !token ? toastSuccess(type, errorMsg, url):
@@ -35,14 +35,12 @@ export const runFetch =(dispatch, fetchObject)=> fetch(
       res.json().then(data => ((res.ok && Promise.resolve(data)) || (!res.ok && Promise.reject(data))))
     ))
     .then(data=> {
-        console.log("signUp data>>>", data);
       if ("success" in data) {
         dispatch({
           type:"SIGNUP",
           payload: data});
       }})
     .catch( error => {
-        console.log("signup error>>>", error);
       dispatch({
         type:"SIGNUP_ERROR",
         payload: "message" in error ? error.message : null });

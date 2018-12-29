@@ -1,7 +1,5 @@
 import React from 'react';
-import Header from "./Header";
-import Footer from "./Footer";
-import SignUp from "./SignUp";
+import Questions from "./Questions";
 import "../assets/styles.css";
 
 class Home extends React.Component {
