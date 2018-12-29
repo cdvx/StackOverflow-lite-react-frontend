@@ -17,7 +17,6 @@ class ShowQuestion extends Component{
     render(){
         
         const {question} = this.props;
-
         return (
             <React.Fragment>
                 <table className="table table-striped table-hover ">
