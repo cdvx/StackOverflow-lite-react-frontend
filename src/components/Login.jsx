@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
 import login from "../actions/loginActions";
+ 
 
 class Login extends Component {
+
     state = {  
         username: "",
         password: ""
@@ -42,8 +44,9 @@ class Login extends Component {
                             <label htmlFor="inputUsername" className="col-lg-2 control-label">Username</label>
                             <div className="col-lg-10">
                                 <input type="text"
+                                    id="inputUsername"
                                     required={true}
-                                    onChange={()=>(this.onChangeField(event, "username"))}
+                                    onChange={(event)=>(this.onChangeField(event, "username"))}
                                     className="form-control" id="inputUsername" placeholder="Username"  />
                             </div>
                         </div>
@@ -51,9 +54,10 @@ class Login extends Component {
                         <div className="form-group">
                             <label htmlFor="inputPassword" className="col-lg-2 control-label">Password</label>
                             <div className="col-lg-10">
-                                <input type="password" 
+                                <input type="password"
+                                    id="inputPassword" 
                                     required={true}
-                                    onChange={()=>(this.onChangeField(event, "password"))}
+                                    onChange={(event)=>(this.onChangeField(event, "password"))}
                                     className="form-control" id="inputRepeatPassword" placeholder="Password" />
                             <div className="checkbox">
                             <label>
@@ -69,6 +73,12 @@ class Login extends Component {
                                     onClick={this.loginUser}
                                     type="submit" className="btn btn-primary">Submit</button>
                             </div>
+                            
+                        </div>
+                        <div className="form-group">
+                            <p>Not a member?
+                                <a href="/signup">Register</a>
+                            </p>
                         </div>
                         
                     </fieldset>

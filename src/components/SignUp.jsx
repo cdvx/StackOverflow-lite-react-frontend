@@ -60,7 +60,8 @@ class SignUp extends Component {
                             <label htmlFor="inputUsername" className="col-lg-2 control-label">Username</label>
                             <div className="col-lg-10">
                                 <input type="text"
-                                    onChange={()=>(this.onChangeField(event, "username"))}
+                                    id="inputUsername"
+                                    onChange={(event)=>(this.onChangeField(event, "username"))}
                                     className="form-control" id="inputUsername" placeholder="Username"  required/>
                             </div>
                         </div>
@@ -69,7 +70,8 @@ class SignUp extends Component {
                             <label htmlFor="inputEmail" className="col-lg-2 control-label">Email</label>
                             <div className="col-lg-10">
                                 <input type="text" 
-                                    onChange={()=>(this.onChangeField(event, "email"))}
+                                    id="inputEmail"
+                                    onChange={(event)=>(this.onChangeField(event, "email"))}
                                     className="form-control" id="inputEmail" placeholder="Email" required/>
                             </div>
                         </div>
@@ -78,7 +80,8 @@ class SignUp extends Component {
                             <label htmlFor="inputPassword" className="col-lg-2 control-label">Password</label>
                             <div className="col-lg-10">
                                 <input type="password" 
-                                    onChange={()=>(this.onChangeField(event, "password"))}
+                                    id="inputPassword"
+                                    onChange={(event)=>(this.onChangeField(event, "password"))}
                                     className="form-control" id="inputPassword" placeholder="Password" required/>
                             </div>
                         </div>
@@ -86,7 +89,8 @@ class SignUp extends Component {
                             <label htmlFor="inputRepeatPassword" className="col-lg-2 control-label">Repeat Password</label>
                             <div className="col-lg-10">
                                 <input type="password" 
-                                    onChange={()=>(this.onChangeField(event, "repeatPassword"))}
+                                    id="inputrepeatPassword"
+                                    onChange={(event)=>(this.onChangeField(event, "repeatPassword"))}
                                     className="form-control" id="inputRepeatPassword" placeholder="Repeat Password" required/>
                         </div>
                         </div>
@@ -98,7 +102,11 @@ class SignUp extends Component {
                                     type="submit" className="btn btn-primary">Submit</button>
                             </div>
                         </div>
-                        
+                        <div className="form-group">
+                            <p>Already have an account?
+                                <a href="/login">Login</a>
+                            </p>
+                        </div>
                     </fieldset>
                 </form>
           

@@ -8,7 +8,7 @@ import questionReducer from "./questionReducer";
 export default combineReducers({
     signUpAuth: signupReducer,
     loginAuth: loginReducer,
-    questions: questionsReducer,
+    questionsReducer,
     askQuestion: postQuestionReducer,
     question: questionReducer
 });
