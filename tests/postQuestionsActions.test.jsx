@@ -3,22 +3,23 @@ import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import fetchMock from "fetch-mock";
 import expect from "expect";
-import questions from "../src/actions/questionsAction";
+import askQuestion from "../src/actions/postQuestionActions";
 import {alert, errorAlert} from "../src/actions/signUpActions";
 import * as store_ from "../src/store";
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 
-const questionsUrl = "https://stackoverflow-lite-cdvx2.herokuapp.com/api/v1/questions";
+const postQuestionUrl = "https://stackoverflow-lite-cdvx2.herokuapp.com/api/v1/questions";
 
 const dataObject= {
   data: {
-    method: "GET",
-    mode: "cors",
-    headers: { "content-type": "application/json" },
-    questions: []
-}};
+    success: "sucess",
+    message: "message",
+    topic: "chucky@gmail.com",
+    body: "password",
+
+  }};
 
 describe(" sigup actions ", () => {
   afterEach(() => {
@@ -26,11 +27,11 @@ describe(" sigup actions ", () => {
   });
 
   it("logins in user with login action", () => {
-    fetchMock.get(questionsUrl, 200);
+    fetchMock.post(postQuestionUrl, dataObject.data);
     const store = mockStore({ item: {} });
-    store.dispatch(questions(dataObject.data));
+    store.dispatch(askQuestion(dataObject.data));
     expect(store.getActions()).toEqual([]);
-    store.dispatch(questions({errors: "error message"}));
+    store.dispatch(askQuestion({errors: "error message"}));
     expect(store.getActions()).toEqual([]);
 
   });
@@ -38,20 +39,20 @@ describe(" sigup actions ", () => {
   it("logins in user with login action", () => {
     fetch.mockReject(new Error("fake error message"));
     const store = mockStore({ errors: {} });
-    store.dispatch(questions(dataObject.data));
+    store.dispatch(askQuestion(dataObject.data));
     expect(store.getActions()).toEqual([]);
-    store.dispatch(questions({errors: "error message"}));
+    store.dispatch(askQuestion({errors: "error message"}));
     expect(store.getActions()).toEqual([]);
 
     // expect(alert("error","this is an error message", null, null, "/")).toEqual(undefined);
 
   });
   it("logins in user with login action", () => {
-    fetchMock.get(questionsUrl, dataObject.data);
+    fetchMock.post(postQuestionUrl, {errors: "this error!"}, 200);
     const store = mockStore({ item: {} });
-    store.dispatch(questions({errors: "this error!"}));
+    store.dispatch(askQuestion({errors: "this error!"}));
     expect(store.getActions()).toEqual([]);
-    store.dispatch(questions({errors: "error message"}));
+    store.dispatch(askQuestion({errors: "error message"}));
     expect(store.getActions()).toEqual([]);
 
   });

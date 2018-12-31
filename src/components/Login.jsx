@@ -59,11 +59,11 @@ class Login extends Component {
                                     required={true}
                                     onChange={(event)=>(this.onChangeField(event, "password"))}
                                     className="form-control" id="inputRepeatPassword" placeholder="Password" />
-                            <div className="checkbox">
+                            {/* <div className="checkbox">
                             <label>
                                 <input type="checkbox" /> Remember me
                             </label>
-                            </div>
+                            </div> */}
                         </div>
                         </div>
                         <div className="form-group">

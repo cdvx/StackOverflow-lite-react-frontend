@@ -45,7 +45,7 @@ describe("<SignUp />", () => {
 describe("test the login container", () => {
   const middlewares = [thunk];
   const mockStore = configureMockStore(middlewares);
-  const storee = mockStore({  state: {username: "",email:"", password: "", repeatPassword:""},signupUser: jest.fn()});;
+  const storee = mockStore({  state: {username: "cdvx",email:"cdvx@fox.com", password: "1234", repeatPassword:"1234"},signupUser: jest.fn()});;
   const fakeEvent = { preventDefault: () => {}};
 
   const wrapper = mount(<Provider store={storee}><SignUp fakeEvent /></Provider>);
@@ -91,7 +91,7 @@ describe("Login", () => {
 
 describe("Checks whether mapstate to props returns", () => {
   const expectedProp = {
-    state:{ state: {username: "",email:"",password: "", repeatPassword:""},signupUser: jest.fn()},
+    state:{ state: {username:"cdvx", password:"3232", emai:"cdvx@fox.com", repeatPassword:"3232"},signupUser: jest.fn()},
     loginUser: jest.fn()
   };
 

@@ -11,7 +11,6 @@ class PostQuestion extends Component {
     postQuestion = event => {
         event.preventDefault();
         const {topic, body} = this.state;
-        console.log(".....>", topic, body);
         this.props.postQuestion({
             topic,
             body
@@ -43,7 +42,7 @@ class PostQuestion extends Component {
                         <div className="form-group">
                             <label htmlFor="inputTopic" className="col-lg-2 control-label">Topic</label>
                             <div className="col-lg-10">
-                                <input type="text" required onChange={()=>(this.onChangeField(event, "topic"))}
+                                <input type="text" required onChange={(event)=>(this.onChangeField(event, "topic"))}
                                     className="form-control" id="inputTopic" placeholder="Topic"  />
                             </div>
                         </div>
@@ -52,7 +51,7 @@ class PostQuestion extends Component {
                         <label htmlFor="textArea" class="col-lg-2 control-label">Body</label>
                         <div className="col-lg-10">
                             <textarea 
-                                onChange={()=>(this.onChangeField(event, "body"))}
+                                onChange={(event)=>(this.onChangeField(event, "body"))}
                                 className="form-control" rows="3" id="textArea"></textarea>
                             <span className="help-block">The body can be as long as you please.</span>
                         </div>

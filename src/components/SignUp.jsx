@@ -2,6 +2,24 @@ import React, { Component } from 'react';
 import {connect} from "react-redux";
 import signup from '../actions/signUpActions';
 
+
+const  Inputs = ({htmlFor, innerHtml, onChangeField, type, placeholder}) => {
+    return (  
+        <React.Fragment>
+            <div className="form-group">
+                <label htmlFor={htmlFor} className="col-lg-2 control-label">{innerHtml}</label>
+                <div className="col-lg-10">
+                    <input type="text"
+                        id={htmlFor}
+                        onChange={(event)=>(onChangeField(event, type))}
+                        className="form-control" placeholder={placeholder}  required/>
+                </div>
+            </div>
+        </React.Fragment>
+    );
+};
+ 
+
 class SignUp extends Component {
     state = {  
         username: "",
@@ -56,44 +74,39 @@ class SignUp extends Component {
                 <form className="form-horizontal" >
                     <fieldset>
                         <legend className="text-black">SIgn Up</legend>
-                        <div className="form-group">
-                            <label htmlFor="inputUsername" className="col-lg-2 control-label">Username</label>
-                            <div className="col-lg-10">
-                                <input type="text"
-                                    id="inputUsername"
-                                    onChange={(event)=>(this.onChangeField(event, "username"))}
-                                    className="form-control" id="inputUsername" placeholder="Username"  required/>
-                            </div>
-                        </div>
+                        
+                        <Inputs
+                            htmlFor={"inputUsername"}
+                            innerHtml={"Username"}
+                            onChangeField={this.onChangeField}
+                            type={"username"}
+                            placeholder={"Username"}
+                        />
 
-                        <div className="form-group">
-                            <label htmlFor="inputEmail" className="col-lg-2 control-label">Email</label>
-                            <div className="col-lg-10">
-                                <input type="text" 
-                                    id="inputEmail"
-                                    onChange={(event)=>(this.onChangeField(event, "email"))}
-                                    className="form-control" id="inputEmail" placeholder="Email" required/>
-                            </div>
-                        </div>
+                        <Inputs
+                            htmlFor={"inputEmail"}
+                            innerHtml={"Email"}
+                            onChangeField={this.onChangeField}
+                            type={"email"}
+                            placeholder={"Email"}
+                        />
 
-                        <div className="form-group">
-                            <label htmlFor="inputPassword" className="col-lg-2 control-label">Password</label>
-                            <div className="col-lg-10">
-                                <input type="password" 
-                                    id="inputPassword"
-                                    onChange={(event)=>(this.onChangeField(event, "password"))}
-                                    className="form-control" id="inputPassword" placeholder="Password" required/>
-                            </div>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="inputRepeatPassword" className="col-lg-2 control-label">Repeat Password</label>
-                            <div className="col-lg-10">
-                                <input type="password" 
-                                    id="inputrepeatPassword"
-                                    onChange={(event)=>(this.onChangeField(event, "repeatPassword"))}
-                                    className="form-control" id="inputRepeatPassword" placeholder="Repeat Password" required/>
-                        </div>
-                        </div>
+                        <Inputs
+                            htmlFor={"inputPassword"}
+                            innerHtml={"Password"}
+                            onChangeField={this.onChangeField}
+                            type={"password"}
+                            placeholder={"Password"}
+                        />
+
+                        <Inputs
+                            htmlFor={"inputRepeatPassword"}
+                            innerHtml={"Repeat Password"}
+                            onChangeField={this.onChangeField}
+                            type={"repeatPassword"}
+                            placeholder={"Repeat Password"}
+                        />
+
                         <div className="form-group">
                             <div className="col-lg-10 col-lg-offset-2">
                                 <button

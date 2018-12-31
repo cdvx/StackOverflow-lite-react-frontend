@@ -897,7 +897,19 @@ ShallowWrapper {
             >
               <li
                 className="active"
-              />
+              >
+                <a
+                  href="/postquestion"
+                  id="select-question"
+                >
+                  Post Question 
+                  <span
+                    className="sr-only"
+                  >
+                    (current)
+                  </span>
+                </a>
+              </li>
             </ul>
             <ul
               className="nav navbar-nav navbar-right"
@@ -906,20 +918,12 @@ ShallowWrapper {
                 className="active"
               >
                 <a
-                  href="/login"
+                  className="logOut"
+                  href="/"
                   id="select-question"
+                  onClick={[Function]}
                 >
-                  Login
-                </a>
-              </li>
-              <li
-                className="active"
-              >
-                <a
-                  href="/signup"
-                  id="select-question"
-                >
-                  SignUp
+                  Sign out
                 </a>
               </li>
             </ul>
@@ -979,7 +983,19 @@ ShallowWrapper {
             >
               <li
                 className="active"
-              />
+              >
+                <a
+                  href="/postquestion"
+                  id="select-question"
+                >
+                  Post Question 
+                  <span
+                    className="sr-only"
+                  >
+                    (current)
+                  </span>
+                </a>
+              </li>
             </ul>
             <ul
               className="nav navbar-nav navbar-right"
@@ -988,20 +1004,12 @@ ShallowWrapper {
                 className="active"
               >
                 <a
-                  href="/login"
+                  className="logOut"
+                  href="/"
                   id="select-question"
+                  onClick={[Function]}
                 >
-                  Login
-                </a>
-              </li>
-              <li
-                className="active"
-              >
-                <a
-                  href="/signup"
-                  id="select-question"
-                >
-                  SignUp
+                  Sign out
                 </a>
               </li>
             </ul>
@@ -1060,7 +1068,19 @@ ShallowWrapper {
               >
                 <li
                   className="active"
-                />
+                >
+                  <a
+                    href="/postquestion"
+                    id="select-question"
+                  >
+                    Post Question 
+                    <span
+                      className="sr-only"
+                    >
+                      (current)
+                    </span>
+                  </a>
+                </li>
               </ul>
               <ul
                 className="nav navbar-nav navbar-right"
@@ -1069,20 +1089,12 @@ ShallowWrapper {
                   className="active"
                 >
                   <a
-                    href="/login"
+                    className="logOut"
+                    href="/"
                     id="select-question"
+                    onClick={[Function]}
                   >
-                    Login
-                  </a>
-                </li>
-                <li
-                  className="active"
-                >
-                  <a
-                    href="/signup"
-                    id="select-question"
-                  >
-                    SignUp
+                    Sign out
                   </a>
                 </li>
               </ul>
@@ -1249,7 +1261,19 @@ ShallowWrapper {
                 >
                   <li
                     className="active"
-                  />
+                  >
+                    <a
+                      href="/postquestion"
+                      id="select-question"
+                    >
+                      Post Question 
+                      <span
+                        className="sr-only"
+                      >
+                        (current)
+                      </span>
+                    </a>
+                  </li>
                 </ul>,
                 <ul
                   className="nav navbar-nav navbar-right"
@@ -1258,20 +1282,12 @@ ShallowWrapper {
                     className="active"
                   >
                     <a
-                      href="/login"
+                      className="logOut"
+                      href="/"
                       id="select-question"
+                      onClick={[Function]}
                     >
-                      Login
-                    </a>
-                  </li>
-                  <li
-                    className="active"
-                  >
-                    <a
-                      href="/signup"
-                      id="select-question"
-                    >
-                      SignUp
+                      Sign out
                     </a>
                   </li>
                 </ul>,
@@ -1288,7 +1304,19 @@ ShallowWrapper {
                 "props": Object {
                   "children": <li
                     className="active"
-                  />,
+                  >
+                    <a
+                      href="/postquestion"
+                      id="select-question"
+                    >
+                      Post Question 
+                      <span
+                        className="sr-only"
+                      >
+                        (current)
+                      </span>
+                    </a>
+                  </li>,
                   "className": "nav navbar-nav",
                 },
                 "ref": null,
@@ -1297,11 +1325,54 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": null,
+                    "children": <a
+                      href="/postquestion"
+                      id="select-question"
+                    >
+                      Post Question 
+                      <span
+                        className="sr-only"
+                      >
+                        (current)
+                      </span>
+                    </a>,
                     "className": "active",
                   },
                   "ref": null,
-                  "rendered": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "Post Question ",
+                        <span
+                          className="sr-only"
+                        >
+                          (current)
+                        </span>,
+                      ],
+                      "href": "/postquestion",
+                      "id": "select-question",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Post Question ",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "(current)",
+                          "className": "sr-only",
+                        },
+                        "ref": null,
+                        "rendered": "(current)",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "a",
+                  },
                   "type": "li",
                 },
                 "type": "ul",
@@ -1312,42 +1383,39 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
+                    false,
+                    false,
                     <li
                       className="active"
                     >
                       <a
-                        href="/login"
+                        className="logOut"
+                        href="/"
                         id="select-question"
+                        onClick={[Function]}
                       >
-                        Login
+                        Sign out
                       </a>
                     </li>,
-                    <li
-                      className="active"
-                    >
-                      <a
-                        href="/signup"
-                        id="select-question"
-                      >
-                        SignUp
-                      </a>
-                    </li>,
-                    null,
                   ],
                   "className": "nav navbar-nav navbar-right",
                 },
                 "ref": null,
                 "rendered": Array [
+                  false,
+                  false,
                   Object {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": <a
-                        href="/login"
+                        className="logOut"
+                        href="/"
                         id="select-question"
+                        onClick={[Function]}
                       >
-                        Login
+                        Sign out
                       </a>,
                       "className": "active",
                     },
@@ -1357,46 +1425,18 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "Login",
-                        "href": "/login",
+                        "children": "Sign out",
+                        "className": "logOut",
+                        "href": "/",
                         "id": "select-question",
+                        "onClick": [Function],
                       },
                       "ref": null,
-                      "rendered": "Login",
+                      "rendered": "Sign out",
                       "type": "a",
                     },
                     "type": "li",
                   },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <a
-                        href="/signup"
-                        id="select-question"
-                      >
-                        SignUp
-                      </a>,
-                      "className": "active",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "SignUp",
-                        "href": "/signup",
-                        "id": "select-question",
-                      },
-                      "ref": null,
-                      "rendered": "SignUp",
-                      "type": "a",
-                    },
-                    "type": "li",
-                  },
-                  null,
                 ],
                 "type": "ul",
               },
@@ -1466,7 +1506,19 @@ ShallowWrapper {
               >
                 <li
                   className="active"
-                />
+                >
+                  <a
+                    href="/postquestion"
+                    id="select-question"
+                  >
+                    Post Question 
+                    <span
+                      className="sr-only"
+                    >
+                      (current)
+                    </span>
+                  </a>
+                </li>
               </ul>
               <ul
                 className="nav navbar-nav navbar-right"
@@ -1475,20 +1527,12 @@ ShallowWrapper {
                   className="active"
                 >
                   <a
-                    href="/login"
+                    className="logOut"
+                    href="/"
                     id="select-question"
+                    onClick={[Function]}
                   >
-                    Login
-                  </a>
-                </li>
-                <li
-                  className="active"
-                >
-                  <a
-                    href="/signup"
-                    id="select-question"
-                  >
-                    SignUp
+                    Sign out
                   </a>
                 </li>
               </ul>
@@ -1548,7 +1592,19 @@ ShallowWrapper {
               >
                 <li
                   className="active"
-                />
+                >
+                  <a
+                    href="/postquestion"
+                    id="select-question"
+                  >
+                    Post Question 
+                    <span
+                      className="sr-only"
+                    >
+                      (current)
+                    </span>
+                  </a>
+                </li>
               </ul>
               <ul
                 className="nav navbar-nav navbar-right"
@@ -1557,20 +1613,12 @@ ShallowWrapper {
                   className="active"
                 >
                   <a
-                    href="/login"
+                    className="logOut"
+                    href="/"
                     id="select-question"
+                    onClick={[Function]}
                   >
-                    Login
-                  </a>
-                </li>
-                <li
-                  className="active"
-                >
-                  <a
-                    href="/signup"
-                    id="select-question"
-                  >
-                    SignUp
+                    Sign out
                   </a>
                 </li>
               </ul>
@@ -1629,7 +1677,19 @@ ShallowWrapper {
                 >
                   <li
                     className="active"
-                  />
+                  >
+                    <a
+                      href="/postquestion"
+                      id="select-question"
+                    >
+                      Post Question 
+                      <span
+                        className="sr-only"
+                      >
+                        (current)
+                      </span>
+                    </a>
+                  </li>
                 </ul>
                 <ul
                   className="nav navbar-nav navbar-right"
@@ -1638,20 +1698,12 @@ ShallowWrapper {
                     className="active"
                   >
                     <a
-                      href="/login"
+                      className="logOut"
+                      href="/"
                       id="select-question"
+                      onClick={[Function]}
                     >
-                      Login
-                    </a>
-                  </li>
-                  <li
-                    className="active"
-                  >
-                    <a
-                      href="/signup"
-                      id="select-question"
-                    >
-                      SignUp
+                      Sign out
                     </a>
                   </li>
                 </ul>
@@ -1818,7 +1870,19 @@ ShallowWrapper {
                   >
                     <li
                       className="active"
-                    />
+                    >
+                      <a
+                        href="/postquestion"
+                        id="select-question"
+                      >
+                        Post Question 
+                        <span
+                          className="sr-only"
+                        >
+                          (current)
+                        </span>
+                      </a>
+                    </li>
                   </ul>,
                   <ul
                     className="nav navbar-nav navbar-right"
@@ -1827,20 +1891,12 @@ ShallowWrapper {
                       className="active"
                     >
                       <a
-                        href="/login"
+                        className="logOut"
+                        href="/"
                         id="select-question"
+                        onClick={[Function]}
                       >
-                        Login
-                      </a>
-                    </li>
-                    <li
-                      className="active"
-                    >
-                      <a
-                        href="/signup"
-                        id="select-question"
-                      >
-                        SignUp
+                        Sign out
                       </a>
                     </li>
                   </ul>,
@@ -1857,7 +1913,19 @@ ShallowWrapper {
                   "props": Object {
                     "children": <li
                       className="active"
-                    />,
+                    >
+                      <a
+                        href="/postquestion"
+                        id="select-question"
+                      >
+                        Post Question 
+                        <span
+                          className="sr-only"
+                        >
+                          (current)
+                        </span>
+                      </a>
+                    </li>,
                     "className": "nav navbar-nav",
                   },
                   "ref": null,
@@ -1866,11 +1934,54 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": null,
+                      "children": <a
+                        href="/postquestion"
+                        id="select-question"
+                      >
+                        Post Question 
+                        <span
+                          className="sr-only"
+                        >
+                          (current)
+                        </span>
+                      </a>,
                       "className": "active",
                     },
                     "ref": null,
-                    "rendered": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "Post Question ",
+                          <span
+                            className="sr-only"
+                          >
+                            (current)
+                          </span>,
+                        ],
+                        "href": "/postquestion",
+                        "id": "select-question",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Post Question ",
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "(current)",
+                            "className": "sr-only",
+                          },
+                          "ref": null,
+                          "rendered": "(current)",
+                          "type": "span",
+                        },
+                      ],
+                      "type": "a",
+                    },
                     "type": "li",
                   },
                   "type": "ul",
@@ -1881,42 +1992,39 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
+                      false,
+                      false,
                       <li
                         className="active"
                       >
                         <a
-                          href="/login"
+                          className="logOut"
+                          href="/"
                           id="select-question"
+                          onClick={[Function]}
                         >
-                          Login
+                          Sign out
                         </a>
                       </li>,
-                      <li
-                        className="active"
-                      >
-                        <a
-                          href="/signup"
-                          id="select-question"
-                        >
-                          SignUp
-                        </a>
-                      </li>,
-                      null,
                     ],
                     "className": "nav navbar-nav navbar-right",
                   },
                   "ref": null,
                   "rendered": Array [
+                    false,
+                    false,
                     Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
                         "children": <a
-                          href="/login"
+                          className="logOut"
+                          href="/"
                           id="select-question"
+                          onClick={[Function]}
                         >
-                          Login
+                          Sign out
                         </a>,
                         "className": "active",
                       },
@@ -1926,46 +2034,18 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": "Login",
-                          "href": "/login",
+                          "children": "Sign out",
+                          "className": "logOut",
+                          "href": "/",
                           "id": "select-question",
+                          "onClick": [Function],
                         },
                         "ref": null,
-                        "rendered": "Login",
+                        "rendered": "Sign out",
                         "type": "a",
                       },
                       "type": "li",
                     },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <a
-                          href="/signup"
-                          id="select-question"
-                        >
-                          SignUp
-                        </a>,
-                        "className": "active",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "SignUp",
-                          "href": "/signup",
-                          "id": "select-question",
-                        },
-                        "ref": null,
-                        "rendered": "SignUp",
-                        "type": "a",
-                      },
-                      "type": "li",
-                    },
-                    null,
                   ],
                   "type": "ul",
                 },
