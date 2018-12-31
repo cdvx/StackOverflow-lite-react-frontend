@@ -9,6 +9,7 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <div className="jumbotron2">
+        <Questions />
         </div>
       </React.Fragment>
     );
