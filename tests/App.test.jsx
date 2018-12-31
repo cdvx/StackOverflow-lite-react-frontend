@@ -9,30 +9,33 @@ import Home from "../src/components/Home";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 
-
-describe('<AppRouter />', () => {
-  it('should render without crashing', () => {
-    expect(mount.bind(null, <AppRouter />)).toMatchSnapshot();
-  });
-});
-
-
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 const store = mockStore({ state: {username: "",password: ""},
   loginUser: jest.fn()
 });
+
+describe('<AppRouter />', () => {
+  it('should render without crashing', () => {
+    expect(mount.bind(store, <AppRouter />)).toMatchSnapshot();
+  });
+});
+
+
+
 it("it should render component", () => {
   const wrapper = shallow(
     <MemoryRouter>
       <Provider store={store}><AppRouter /></Provider>
     </MemoryRouter>
   );
+  // expect(wrapper).toMatchSnapshot()
 });
 
 describe("<Home />", () => {
   test("renders the component", () => {
     const wrapper = shallow(<Home />);
+
   });
 });
 

@@ -10,5 +10,5 @@ export default combineReducers({
     loginAuth: loginReducer,
     questionsReducer,
     askQuestion: postQuestionReducer,
-    question: questionReducer
+    questionReducer
 });

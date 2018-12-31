@@ -18,9 +18,9 @@ const store = mockStore({ questionReducer: {question: {topic:"hfbcn", body:"fsds
 });
 
 it("it should render component", () => {
-  shallow(
+  mount(
     <MemoryRouter>
-      <Provider store={store} question={props.question}><ShowQuestion /></Provider>
+      <Provider store={store} ><ShowQuestion /></Provider>
     </MemoryRouter>,
   );
 });
@@ -37,12 +37,6 @@ const props = {
   followedUsername: "cdvx",
 };
 
-describe("<ShowQuestion />", () => {
-  test("renders the component", () => {
-    const wrapper = shallow(<Provider store={store}><ShowQuestion /></Provider>);
-    expect(wrapper).toMatchSnapshot();
-  });
-});
 
 
   describe("<Question />", () => {
@@ -61,6 +55,7 @@ describe("test the login container", () => {
   wrapper.setState({
     queston: {topic:"hfbcn", body:"fsdsds", author:"hcxhffd"}
   });
+  localStorage.getItem("questionId")
   wrapper.setProps({getQuestion: jest.fn()});
   it("should mount the login component", () => {
     expect(wrapper.find("big")).toBeTruthy();
@@ -75,7 +70,7 @@ describe("Login", () => {
   localStorage.setItem("questionId", "123");
   it("should show previously previously passed state", () => {
     const state = {
-        "questionReducer": {question: {topic:"hfbcn", body:"fsdsds", author:"hcxhffd"}}
+        question: {topic:"hfbcn", body:"fsdsds", author:"hcxhffd"}
     };
     expect(mapStateToProps(state)).toEqual({
         question: undefined

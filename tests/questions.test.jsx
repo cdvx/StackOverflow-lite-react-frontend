@@ -11,7 +11,7 @@ import Questions, { Info, Question, mapStateToProps, mapDispatchToProps} from ".
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
-const store = mockStore({ questionsReducer: {questions: [],messages: "rrff"}, getQuestions: jest.fn()});
+const store = mockStore({ questionsReducer: {questions: [],messages: "rrff"}, getQuestions: jest.fn(), handleQuestionClick: jest.fn()});
 
 it("it should render component", () => {
   shallow(
@@ -35,14 +35,14 @@ const props = {
 
 describe("<Questions />", () => {
   test("renders the component", () => {
-    const wrapper = shallow(<Provider store={store}><Questions /></Provider>);
+    const wrapper = mount(<Provider store={store}><Questions /></Provider>);
     expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe("<Question />", () => {
     test("renders the component", () => {
-      const wrapper = shallow(<Question question={props.messages}/>);
+      const wrapper = mount(<Question question={props.messages}/>);
       expect(wrapper).toMatchSnapshot();
     });
   });

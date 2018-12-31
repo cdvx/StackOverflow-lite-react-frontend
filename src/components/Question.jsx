@@ -14,34 +14,42 @@ class ShowQuestion extends Component{
         getQuestion(questionId);
     }
 
+    showLoader = () => (
+        <div className="text-center">
+            <iframe src="https://giphy.com/embed/IwSG1QKOwDjQk" id="loadFrame" frameBorder="0" class="giphy-embed" >
+            </iframe>
+        </div>
+    );
+
     render(){
         
-        const {question} = this.props;
+        const {question, loading} = this.props.questionReducer;
 
         return (
             <React.Fragment>
+                {loading === true ? this.showLoader() :
                 <table className="table table-striped table-hover ">
                     <thead>
                         <tr>
 
-                        <div className="container"><th><big className="text-primary">Question</big></th></div>
+                        <div className="container"><th><big>Question</big></th></div>
 
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
                         <tr >
-                        <td id="quest"><Question question={question.question} /></td>
+                        <td id="quest"><Question question={question} /></td>
 
                         </tr>
                     </tbody>
-                </table>
+                </table>}
             </React.Fragment>
         );
     }
 };
 
-export const mapStateToProps = questionReducer => ({
-    question: questionReducer.question
+export const mapStateToProps = ({questionReducer}) => ({
+    questionReducer
 });
 
 export const mapDispatchToProps = dispatch => ({
