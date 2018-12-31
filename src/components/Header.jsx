@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class Header extends Component {
 
     logOut = event => {
@@ -28,9 +27,9 @@ class Header extends Component {
                             
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
-                            {!localStorage.getItem("token") && <li><a id="select-question" href="/login">Login</a></li>}
-                            {!localStorage.getItem("token") && <li><a id="select-question" href="/signup">SignUp</a></li>}
-                            {localStorage.getItem("token") && <li><a id="select-question" href="/" onClick={this.logOut} >Sign out</a></li>}
+                            {!localStorage.getItem("token") && <li className="active"><a id="select-question" href="/login">Login</a></li>}
+                            {!localStorage.getItem("token") && <li className="active"><a id="select-question" href="/signup">SignUp</a></li>}
+                            {localStorage.getItem("token") && <li className="active"><a id="select-question" className="logOut" href="/" onClick={this.logOut} >Sign out</a></li>}
                         </ul>
                         </div>
                     </div>

@@ -1,5 +1,4 @@
 
-import {alert, errorAlert} from "../actions/signUpActions";
 const questionsChecker = (state, action) => {
     switch (action.type) {
     case "QUESTIONS":{

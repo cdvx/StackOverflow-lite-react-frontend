@@ -15,7 +15,7 @@ export const Question = ({question}) => {
 }
 
 
-const Info = ({messages}) => {
+export const Info = ({messages}) => {
     return (  
         <React.Fragment>
             <tr className="info">
@@ -53,8 +53,8 @@ class Questions extends Component {
         )
     }));
     render() { 
-        const {results, messages} = this.props;
-        console.log("props here>>", this.props, results, messages)
+        const {questions, messages} = this.props.questionsReducer;
+        console.log("props here>>", questions, messages)
         return ( 
             <React.Fragment>
                 <table className="table table-striped table-hover ">
@@ -64,8 +64,8 @@ class Questions extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {results && this.renderQuestions(results)}
-                        {messages && <Info messages={messages}/>}
+                        {questions && this.renderQuestions(questions)}
+                        {messages && messages && <Info messages={messages}/>}
                     
                     </tbody>
                 </table> 
@@ -75,9 +75,8 @@ class Questions extends Component {
 }
  
 
-export const mapStateToProps = ({questions}) => ({
-    results: questions.questions,
-    messages: questions.messages
+export const mapStateToProps = ({questionsReducer}) => ({
+    questionsReducer
 });
 
 export const mapDispatchToProps = dispatch => ({

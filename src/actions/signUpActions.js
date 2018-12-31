@@ -1,6 +1,6 @@
 import toastr from "toastr";
 
-const signUpUrl = "https://stackoverflow-lite-cdvx2.herokuapp.com/api/v1/auth/signup";
+export const signUpUrl = "https://stackoverflow-lite-cdvx2.herokuapp.com/api/v1/auth/signup";
 
 function storeDataToast(username, token, url){
     toastr.success(`Logging in as ${username}!`);
