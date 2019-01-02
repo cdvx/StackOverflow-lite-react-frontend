@@ -2,7 +2,7 @@
 
 
 ## Build status
-[![Build Status](https://travis-ci.com/cdvx/StackOverflow-lite-react-frontend.svg?branch=ft-users-can-post-questions%2Flogout-162880270)](https://travis-ci.com/cdvx/StackOverflow-lite-react-frontend)
+[![Build Status](https://travis-ci.com/cdvx/StackOverflow-lite-react-frontend.svg?branch=develop)](https://travis-ci.com/cdvx/StackOverflow-lite-react-frontend)
 
 ## Coverage
 [![Test Coverage](https://api.codeclimate.com/v1/badges/bf43aa0b46ef51c53e13/test_coverage)](https://codeclimate.com/github/cdvx/StackOverflow-lite-react-frontend/test_coverage)
