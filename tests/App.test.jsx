@@ -33,7 +33,6 @@ it("it should render component", () => {
 describe("<Home />", () => {
   test("renders the component", () => {
     const wrapper = shallow(<Home />);
-    // expect(wrapper).toMatchSnapshot();
   });
 });
 

@@ -2,7 +2,8 @@
 
 
 ## Build status
-[![Build Status](https://travis-ci.com/cdvx/StackOverflow-lite-react-frontend.svg?branch=ft-users-can-post-questions%2Flogout-162880270)](https://travis-ci.com/cdvx/StackOverflow-lite-react-frontend)
+
+[![Build Status](https://travis-ci.com/cdvx/StackOverflow-lite-react-frontend.svg?branch=develop)](https://travis-ci.com/cdvx/StackOverflow-lite-react-frontend)
 
 ## Coverage
 [![Test Coverage](https://api.codeclimate.com/v1/badges/bf43aa0b46ef51c53e13/test_coverage)](https://codeclimate.com/github/cdvx/StackOverflow-lite-react-frontend/test_coverage)
@@ -41,12 +42,23 @@ https://stackoverflow-lite-react.herokuapp.com/logout
 -   It will open the default browser and start the app.
 -   You can test the app by clicking the through the url.
 
+<<<<<<< HEAD
+=======
+# Team code of conduct.
+- Use es6 features(arrow functions and classes) for more concise code.
+- All folder names are supposed to be lowercase
+- Components names are supposed to follow the pascal case naming convention
+- Writing unitests for the one's code is highly encouraged.
+
+
+>>>>>>> [chore #162880241] Deploy application
 # How to run the tests
 
 -   After following the setup steps above
 -   To run the project tests use `yarn test:dev`
 -   To run the project tests with coverage use `yarn coverage`
 
+<<<<<<< HEAD
 
 # Developed with
 
@@ -56,3 +68,13 @@ https://stackoverflow-lite-react.herokuapp.com/logout
 
 # Author
 -   Cedric Lusiba
+=======
+# Developed using
+
+-   React and Redux
+-   Fetch Api
+-   Sass and Bootstrap
+
+# Author
+-   Cedric Lusiba
+>>>>>>> [chore #162880241] Deploy application
