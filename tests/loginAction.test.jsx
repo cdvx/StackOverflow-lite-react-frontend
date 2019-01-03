@@ -16,7 +16,7 @@ const dataObject= {
       email: "chucky@gmail.com",
       password: "password",
       "access_token": "fhdhhjjhfx"
-    },
+    }
 
   }};
 

@@ -3,7 +3,8 @@ import questionChecker from "../src/reducers/questionReducer";
 
 
 const initialState = {
-    question: {}
+    question: {},
+    loading: true
 };
 
 describe(" INITIAL_STATE ", () => {

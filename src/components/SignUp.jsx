@@ -31,7 +31,6 @@ class SignUp extends Component {
     signupUser = event => {
         event.preventDefault();
         const {username, password, email, repeatPassword} = this.state;
-        console.log()
     
         if (username && email && password && repeatPassword) {
             this.props.signupUser({

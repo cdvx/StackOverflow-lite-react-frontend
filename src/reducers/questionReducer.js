@@ -5,7 +5,8 @@ const questionChecker = (state, action) => {
       if (action.payload) {
         return {
           ...state,
-          question: action.payload
+          question: action.payload,
+          loading: false
         };
       }};
   
@@ -23,7 +24,8 @@ const questionChecker = (state, action) => {
   };
   
 const initialState = {
-    question: {}
+    question: {},
+    loading: true
 
 };
   

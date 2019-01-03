@@ -41,6 +41,13 @@ class Questions extends Component {
         localStorage.setItem("questionId", questionId);
     }
 
+    showLoader = () => (
+        <div className="text-center">
+            <iframe src="https://giphy.com/embed/IwSG1QKOwDjQk" id="loadFrame" frameBorder="0" class="giphy-embed" >
+            </iframe>
+        </div>
+    );
+
     renderQuestions = questions => (questions.map(question=>{
         return (
         <React.Fragment>
@@ -53,22 +60,22 @@ class Questions extends Component {
         )
     }));
     render() { 
-        const {questions, messages} = this.props.questionsReducer;
-        console.log("props here>>", questions, messages)
+        const {questions, messages, loading} = this.props.questionsReducer;
         return ( 
             <React.Fragment>
+                {loading === true ? this.showLoader() :
                 <table className="table table-striped table-hover ">
                     <thead>
                         <tr>
                         <div className="container"><th><big >Questions</big></th></div>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
                         {questions && this.renderQuestions(questions)}
                         {messages && messages && <Info messages={messages}/>}
                     
                     </tbody>
-                </table> 
+                </table> }
             </React.Fragment>
          );
     }
