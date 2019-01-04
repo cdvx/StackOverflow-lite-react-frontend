@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import signup from '../actions/signUpActions';
 
 
-const  Inputs = ({htmlFor, innerHtml, onChangeField, type, placeholder}) => {
+const  Inputs = ({htmlFor, innerHtml, onChangeField, type1, type, placeholder}) => {
     return (  
         <React.Fragment>
             <div className="form-group">
@@ -11,14 +11,14 @@ const  Inputs = ({htmlFor, innerHtml, onChangeField, type, placeholder}) => {
                 <div className="col-lg-10">
                     <input type="text"
                         id={htmlFor}
-                        onChange={(event)=>(onChangeField(event, type))}
+                        onChange={(event)=>(onChangeField(event, type1))}
+                        type={type}
                         className="form-control" placeholder={placeholder}  required/>
                 </div>
             </div>
         </React.Fragment>
     );
 };
- 
 
 class SignUp extends Component {
     state = {  
@@ -78,6 +78,7 @@ class SignUp extends Component {
                             htmlFor={"inputUsername"}
                             innerHtml={"Username"}
                             onChangeField={this.onChangeField}
+                            type1={"username"}
                             type={"username"}
                             placeholder={"Username"}
                         />
@@ -86,6 +87,7 @@ class SignUp extends Component {
                             htmlFor={"inputEmail"}
                             innerHtml={"Email"}
                             onChangeField={this.onChangeField}
+                            type1={"email"}
                             type={"email"}
                             placeholder={"Email"}
                         />
@@ -94,6 +96,7 @@ class SignUp extends Component {
                             htmlFor={"inputPassword"}
                             innerHtml={"Password"}
                             onChangeField={this.onChangeField}
+                            type1={"password"}
                             type={"password"}
                             placeholder={"Password"}
                         />
@@ -102,7 +105,8 @@ class SignUp extends Component {
                             htmlFor={"inputRepeatPassword"}
                             innerHtml={"Repeat Password"}
                             onChangeField={this.onChangeField}
-                            type={"repeatPassword"}
+                            type1={"repeatPassword"}
+                            type={"password"}
                             placeholder={"Repeat Password"}
                         />
 
