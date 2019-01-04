@@ -16,7 +16,7 @@ class ShowQuestion extends Component{
 
     showLoader = () => (
         <div className="text-center">
-            <iframe src="https://giphy.com/embed/IwSG1QKOwDjQk" id="loadFrame" frameBorder="0" class="giphy-embed" >
+            <iframe src="https://giphy.com/embed/IwSG1QKOwDjQk" id="loadFrame" frameBorder="0" className="giphy-embed" >
             </iframe>
         </div>
     );

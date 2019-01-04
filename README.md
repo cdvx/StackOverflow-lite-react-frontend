@@ -11,7 +11,7 @@
 
 # Usage
 -   A user that is not logged in can only view questions.
--   A User has to create an account.
+-   A User has to create an account to post a question.
 -   User can then login and have access to all the other parts of the app.
 
 # Features
@@ -37,10 +37,10 @@ https://stackoverflow-lite-react.herokuapp.com/logout
 
 -   Clone this project using `git clone https://github.com/cdvx/StackOverflow-lite-react-frontend.git`
 -   Git checkout to the `develop branch`
--   Install the project dependencies using `yarn install` in the project root.
+-   Install the project dependencies using `yarn ` in the project root.
 -   Run the project locally in development mode using `yarn start:dev`
 -   It will open the default browser and start the app.
--   You can test the app by clicking the through the url.
+-   You can try out the app by clicking the different links.
 
 # How to run the tests
 
@@ -49,7 +49,7 @@ https://stackoverflow-lite-react.herokuapp.com/logout
 -   To run the project tests with coverage use `yarn coverage`
 
 
-# Developed with
+# Developed using
 
 -   React and Redux
 -   Fetch Api
