@@ -36,7 +36,6 @@ const config = {
     ],
   },
   devServer: {
-    // https: true,
     historyApiFallback: true
   },
   plugins: [
