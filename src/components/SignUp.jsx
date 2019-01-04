@@ -19,7 +19,6 @@ const  Inputs = ({htmlFor, innerHtml, onChangeField, type1, type, placeholder}) 
         </React.Fragment>
     );
 };
- 
 
 class SignUp extends Component {
     state = {  
